@@ -7,8 +7,18 @@
     <title>Having fun with Canvas!</title>
 
     <style>
+        body {
+            background-color:
+                #181a1b;
+        }
+
         #gameScreen {
             border: 1px solid black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-color: grey;
         }
 
         img {
@@ -21,7 +31,7 @@
 
 <body>
     <img id="img_ball" src="assets/images/ball.png">
-
+    <img id="img_brick" src="assets/images/brick.jpeg">
 
     <canvas id="gameScreen" width="800" height="600"></canvas>
 
