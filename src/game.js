@@ -19,19 +19,10 @@ export default class Game {
         this.ball = new Ball(this);
         let bricks = buildLevel(this, level1);
 
-
-
-
-        this.gameObjects = [
-            this.ball,
-            this.paddle,
-            ...bricks
-        ];
+        this.gameObjects = [this.ball, this.paddle, ...bricks];
 
         new InputHandler(this.paddle);
-
     }
-
 
     update(deltaTime) {
         this.gameObjects.forEach(object => object.update(deltaTime));
@@ -39,6 +30,5 @@ export default class Game {
 
     draw(ctx) {
         this.gameObjects.forEach(object => object.draw(ctx));
-
     }
 }
