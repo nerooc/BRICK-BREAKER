@@ -15,6 +15,16 @@ export default class InputHandler {
                 case 27:
                     game.togglePause();
                     break;
+
+                case 32:
+                    if (game.gamestate != 3) {
+                        game.start();
+                    } else {
+                        game.lives = 3;
+                        game.currentLevel = 0;
+                        game.start();
+                    }
+                    break;
             }
 
 
