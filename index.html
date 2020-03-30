@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Having fun with Canvas!</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Having fun with Canvas!</title>
+		<style>
+			body {
+				background-color: #181a1b;
+			}
 
-    <style>
-        body {
-            background-color:
-                #181a1b;
-        }
+			#gameScreen {
+				border: 1px solid black;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				border-color: grey;
+			}
 
-        #gameScreen {
-            border: 1px solid black;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-color: grey;
-        }
+			img {
+				display: none;
+			}
+		</style>
+	</head>
 
-        img {
-            display: none;
-        }
-    </style>
+	<body>
+		<img id="img_ball" src="assets/images/ball.png" />
+		<img id="img_brick" src="assets/images/brick.jpeg" />
 
+		<canvas id="gameScreen" width="800" height="600"></canvas>
 
-</head>
-
-<body>
-    <img id="img_ball" src="assets/images/ball.png">
-    <img id="img_brick" src="assets/images/brick.jpeg">
-
-    <canvas id="gameScreen" width="800" height="600"></canvas>
-
-
-    <script type="module" src="src\index.js"></script>
-</body>
-
+		<script type="module" src="src\index.js"></script>
+	</body>
 </html>
