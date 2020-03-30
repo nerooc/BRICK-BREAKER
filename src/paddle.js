@@ -18,7 +18,6 @@ export default class Paddle {
 
             y: game.gameHeight - this.height - 10
 
-
         };
     }
 

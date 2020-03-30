@@ -26,8 +26,6 @@ export default class InputHandler {
                     }
                     break;
             }
-
-
         });
 
 
@@ -44,12 +42,7 @@ export default class InputHandler {
                         paddle.stop();
                     }
                     break;
-
-
-
             }
-
-
         });
     }
 }
