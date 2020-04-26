@@ -2,10 +2,14 @@ import {
     detectCollision
 } from '/src/collisionDetection.js'
 
+var brick = Math.floor(Math.random() * 4 + 1);
+
 
 export default class Brick {
     constructor(game, position) {
-        this.image = document.getElementById("img_brick");
+
+
+        this.image = document.getElementById("img_brick" + brick);
         this.game = game;
         this.position = position;
         this.width = 80;
