@@ -1,6 +1,8 @@
-import {
-    detectCollision
-} from '/src/collisionDetection.js'
+import { detectCollisionHorizontal, detectCollisionVertical } from '/src/collisionDetection.js';
+
+function randomFloat(min, max) {
+    return min + (max - min) * Math.random();
+}
 
 export default class Ball {
     constructor(game) {
@@ -18,8 +20,8 @@ export default class Ball {
 
     reset() {
         this.speed = {
-            x: 4,
-            y: -4
+            x: 5,
+            y: -5
         };
 
         this.position = {
@@ -54,9 +56,14 @@ export default class Ball {
             this.reset();
         }
 
-        if (detectCollision(this, this.game.paddle)) {
+        if (detectCollisionVertical(this, this.game.paddle)) {
             this.speed.y = -this.speed.y;
             this.position.y = this.game.paddle.position.y - this.size;
+        }
+
+        else if(detectCollisionHorizontal(this, this.game.paddle)){
+            this.speed.x = -this.speed.x;
+            this.position.x = this.game.paddle.position.x - this.size;
         }
     }
 }
