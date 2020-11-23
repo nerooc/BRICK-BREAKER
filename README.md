@@ -1,6 +1,6 @@
 # `Brick Breaker`
 
-### [OPEN DEMO]()
+### [OPEN DEMO](https://brick-breaker-tg.netlify.app/)
 
 ## Tech stack
 - (a little bit of) HTML and CSS
